@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Betulingo Global CSS - Academic Excellence Palette
+   ========================================================================== */
+
+/* .root CSS'te küresel değişkenleri tanımladığımız yerdir.
+   Renkleri tek bir merkezden yönetmek, yarın bir gün renk değiştirmek istediğimizde
+   tüm projedeki kodları tek tek aramak yerine sadece burayı değiştirmemizi sağlar. */
+.root {
+    -fx-primary-navy: #1a237e;       /* Stitch'in ana lacivert tonu (Güven ve odaklanma hissi verir) */
+    -fx-accent-blue: #03a9f4;        /* Parlak gökyüzü mavisi (İlerleme çubukları ve vurgular için) */
+    -fx-bg-light: #f9f9f9;           /* Arka plan için yumuşak beyaz (Gözü yormaz) */
+    -fx-surface-white: #ffffff;      /* Kartların iç yüzeyi için saf beyaz */
+    -fx-text-dark: #1a1c1c;          /* Ana metin rengi */
+    -fx-text-muted: #64748b;         /* İkincil, silik metin rengi (Slate-500) */
+    -fx-border-color-light: #e4e7eb;  /* İnce ayraç çizgileri ve kenarlıklar için */
+
+    -fx-background-color: -fx-bg-light;
+    -fx-font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Sol taraftaki sabit Navigasyon Menüsü (Sidebar) */
+.sidebar {
+    -fx-background-color: -fx-surface-white;
+    -fx-border-color: transparent -fx-border-color-light transparent transparent; /* Sadece sağa ince çizgi */
+    -fx-border-width: 1;
+    /* Hafif bir gölge efekti (Stitch tasarımındaki derinlik hissi için) */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.02), 6, 0, 4, 0);
+}
+
+/* Menü butonlarının varsayılan hali */
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-muted;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 16 12 16;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+
+/* Fareyle menü butonunun üzerine gelindiğinde (Hover efekti) */
+.menu-button:hover {
+    -fx-background-color: #f8fafc;
+    -fx-text-fill: -fx-primary-navy;
+}
+
+/* Şu an aktif olan (seçili) menü butonu */
+.menu-button-active {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: -fx-primary-navy;
+    -fx-border-color: transparent transparent transparent -fx-accent-blue; /* Sol kenara mavi şerit */
+    -fx-border-width: 3;
+}
+
+/* Stitch'in o harika beyaz gölgeli, yuvarlatılmış kart tasarımı */
+.quiz-card {
+    -fx-background-color: -fx-surface-white;
+    -fx-background-radius: 16;
+    -fx-border-color: -fx-border-color-light;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.03), 10, 0, 0, 4);
+}
+
+/* Form girdileri (Giriş alanları / TextField) */
+.text-input {
+    -fx-background-color: #f3f4f6;
+    -fx-background-radius: 12;
+    -fx-border-color: -fx-border-color-light;
+    -fx-border-radius: 12;
+    -fx-padding: 12;
+    -fx-text-fill: -fx-text-dark;
+    -fx-font-size: 14px;
+}
+
+/* Giriş alanına odaklanıldığında (Focus efekti) */
+.text-input:focused {
+    -fx-background-color: -fx-surface-white;
+    -fx-border-color: -fx-accent-blue;
+    -fx-border-width: 2;
+}
+
+/* Premium ve Odaklanma Butonları (Derin Lacivert Buton) */
+.focus-button {
+    -fx-background-color: -fx-primary-navy;
+    -fx-text-fill: -fx-surface-white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-padding: 12 24 12 24;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+
+.focus-button:hover {
+    -fx-opacity: 0.9; /* Üzerine gelince çok hafif şeffaflaşarak tepki verir */
+}
+
+/* İlerleme Çubuğu (ProgressBar) Özelleştirmesi */
+.progress-bar .track {
+    -fx-background-color: #cae6ff; /* Arka plandaki soft mavi track */
+    -fx-background-radius: 999;
+}
+.progress-bar .bar {
+    -fx-background-color: -fx-accent-blue; /* Dol dol olan parlak mavi bar */
+    -fx-background-radius: 999;
+}
